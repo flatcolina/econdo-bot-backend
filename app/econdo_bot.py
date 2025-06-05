@@ -31,7 +31,7 @@ def criar_liberacao_econdo(nome, data_checkin, data_checkout):
         driver.find_element(By.CSS_SELECTOR, "[data-testid='create-authorized-person-end-date-input']").send_keys(data_checkout)
 
         driver.find_element(By.CSS_SELECTOR, "[data-testid='create-authorized-person-submit-button']").click()
-        time.sleep(4)
+        time.sleep(10)
 
         # Pega o link de liberação na tela final (ajuste o seletor se necessário)
         link_elem = driver.find_element(By.CSS_SELECTOR, "[data-testid='share-link-target-link']")
