@@ -11,7 +11,8 @@ def criar_liberacao_econdo(nome, data_checkin, data_checkout):
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--window-size=1920,1080')
 
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options)  # <<<<<< CORRIGIDO AQUI
+
     try:
         driver.get('https://app.econdos.com.br/')
         driver.find_element(By.CSS_SELECTOR, "[data-testid='login-username-input']").send_keys('tiagoddantas@me.com')
