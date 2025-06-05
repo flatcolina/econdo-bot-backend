@@ -20,7 +20,7 @@ def criar_liberacao_econdo(nome, data_checkin, data_checkout):
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
     try:
-        # ... resto do código ...
+        # Seu código...
         pass
     finally:
         driver.quit()
